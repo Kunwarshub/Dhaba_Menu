@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#9f211c">
+<title>Pappu Vaishnu Dhaba | Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#9f211c;--red2:#7e1917;--yellow:#f4c928;--cream:#fff9eb;--paper:#fffdf7;--ink:#2b211c;--muted:#796e63;--line:#eee2cc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+.hero{background:var(--red);color:white;position:relative;overflow:hidden;border-bottom:7px solid var(--yellow)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.12);border-radius:50%;width:340px;height:340px}
+.hero:before{right:-110px;top:-190px;box-shadow:0 0 0 35px rgba(255,255,255,.035),0 0 0 70px rgba(255,255,255,.025)}
+.hero:after{left:-210px;bottom:-280px;width:430px;height:430px}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;border-bottom:1px solid rgba(255,255,255,.15)}
+.brand{font-weight:800;letter-spacing:.12em;font-size:12px;display:flex;align-items:center;gap:10px}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--yellow);color:var(--red);display:grid;place-items:center;font-family:"Playfair Display";font-size:21px}
+.nav small{color:#f7dfb9;letter-spacing:.08em;font-size:11px}
+.hero-main{padding:55px 0 58px;position:relative;z-index:1;text-align:center}
+.kicker{color:var(--yellow);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800}
+h1{font-family:"Playfair Display",serif;font-size:clamp(42px,8vw,72px);line-height:1.02;margin:14px 0 10px}
+.hero-main p{margin:0;color:#f4d9cf;font-size:14px}
+.contact{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:25px;font-size:13px;font-weight:700}
+.contact a{color:white;text-decoration:none}
+.contact span{color:var(--yellow);margin-right:6px}
+main{padding:38px 0 70px}
+.heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:19px}
+.eyebrow{font-size:10px;color:var(--red);font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+h2{font:700 34px "Playfair Display",serif;margin:5px 0 0}
+.total{font-size:12px;color:var(--muted)}
+.controls{display:flex;gap:10px;margin-bottom:17px}
+.search{flex:1;position:relative}.search input{width:100%;height:46px;border:1px solid var(--line);background:white;border-radius:10px;padding:0 15px 0 42px;font:inherit;font-size:13px;outline:none}
+.search input:focus{border-color:#c56c52;box-shadow:0 0 0 3px #9f211c12}
+.search svg{position:absolute;left:14px;top:14px;color:#9b8d7e}
+.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 17px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;border:1px solid var(--line);background:transparent;color:#6d5f53;padding:9px 14px;border-radius:30px;font-size:11px;font-weight:700;cursor:pointer}
+.chip.active{background:var(--red);border-color:var(--red);color:white}
+.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.category{background:var(--paper);border:1px solid var(--line);border-radius:13px;overflow:hidden;scroll-margin-top:15px}
+.cat-head{background:#fff1cb;border-bottom:1px solid #f1dfb4;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.cat-head h3{margin:0;color:var(--red);font:700 20px "Playfair Display",serif}
+.cat-head span{font-size:10px;color:#967e57;font-weight:700}
+.items{padding:4px 18px 12px}
+.item{display:flex;justify-content:space-between;gap:15px;align-items:baseline;padding:11px 0;border-bottom:1px dashed #eadfce}
+.item:last-child{border-bottom:0}
+.item-name{font-size:13px;font-weight:600;line-height:1.4}
+.price{font-size:13px;font-weight:800;color:var(--red);white-space:nowrap}
+.note{margin-top:25px;padding:17px 19px;border-radius:11px;background:#fff0c4;border:1px solid #f1d98d;color:#6e4c1e;font-size:12px;line-height:1.65}
+.note strong{color:var(--red)}
+.footer{background:#301b18;color:white;padding:26px 0}
+.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot strong{font:700 20px "Playfair Display",serif}.foot p{margin:5px 0 0;font-size:11px;color:#d9bcb1}.foot .phones{text-align:right;font-size:12px;line-height:1.8;color:#f4d9cf}
+.empty{grid-column:1/-1;padding:40px;text-align:center;background:white;border-radius:12px;color:var(--muted)}
+@media(max-width:720px){.wrap{width:calc(100% - 28px)}.hero-main{padding:45px 0 47px}.nav small{display:none}.menu{grid-template-columns:1fr;gap:13px}main{padding-top:29px}.heading{align-items:flex-start;flex-direction:column;gap:3px}h2{font-size:30px}.foot{align-items:flex-start;flex-direction:column}.foot .phones{text-align:left}.item-name{font-size:13px}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <nav class="nav"><div class="brand"><span class="mark">P</span><span>PAPPU VAISHNU DHABA</span></div><small>GOOD FOOD · HOMELY TASTE</small></nav>
+  <div class="hero-main"><div class="kicker">Welcome to</div><h1>Pappu Vaishnu Dhaba</h1><p>Freshly prepared favourites, served with care.</p>
+   <div class="contact"><a href="tel:01642255300"><span>☎</span>0164-2255300</a><a href="tel:7380081283"><span>☎</span>73800-81283</a></div>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <div class="heading"><div><div class="eyebrow">Fresh from our kitchen</div><h2>Our Menu</h2></div><div class="total" id="total"></div></div>
+ <div class="controls"><label class="search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Search dishes..."></label></div>
+ <div class="chips" id="chips"></div>
+ <div class="menu" id="menu"></div>
+ <div class="note"><strong>Please note:</strong> Every order dish will take a minimum of 30 minutes. Every dish is subject to availability of material in the kitchen or market. Order placed once will not be cancelled. <br><strong>Half-plate prices will be different.</strong></div>
+</main>
+<footer class="footer"><div class="wrap foot"><div><strong>Pappu Vaishnu Dhaba</strong><p>Thank you for dining with us.</p></div><div class="phones">0164-2255300<br>73800-81283</div></div></footer>
+<script>
+const sections = [{"category": "Vegetable", "items": [["Dal Fry", 110], ["Yellow Dal Fry", 120], ["Dal Makhani Maha Chole", 130], ["Dal Makhani Maha Rajmaha", 130], ["Pappu Special Dal (Desi Ghee)", 160], ["Special Yellow Dal (Desi Ghee)", 160], ["Special Bhartha (Desi Ghee)", 160], ["Aloo Gobhi", 130], ["Aloo Matar", 130], ["Gajar Matar", 130], ["Rajmah", 130], ["Chole", 130], ["Karhi", 130], ["Dahi Fry", 160], ["Veg. Gravy", 170], ["Sev Bhaji", 170], ["Aloo Methi", 170], ["Aloo Piaz", 170], ["Aloo Jeera", 170], ["Palak Chana", 170], ["Jeera Aloo Dahi Fry", 170], ["Mix Vegetable", 170], ["Palak Paneer", 170], ["Matar Paneer", 170], ["Sarson Ka Saag", 170], ["Palak Kofta", 170], ["Rajmah Masala", 180], ["Chana Masala", 180], ["Soya Gravy Chap", 210], ["Shahi Paneer", 210], ["Cheese Tomato", 210], ["Malai Kofta", 210], ["Malai Matar", 210], ["Mashroom Matar", 210], ["Khoya Paneer", 210], ["Dum Aloo", 230], ["Malai Methi", 240], ["Malai Piaz", 240], ["Mashroom Masala", 240], ["Paneer Butter Masala", 240], ["Kadai Paneer", 240], ["Paneer Do Piyaza", 240], ["Paneer Bhurjee", 250], ["Handi Paneer", 250], ["Cheese Chilli", 300], ["Mushroom Chilli", 300]]}, {"category": "Rice", "items": [["Rice", 100], ["Matar Pulao", 150], ["Cheese Pulao", 200], ["Veg Biryani", 200], ["Veg. Fried Rice", 200], ["Mushroom Paneer Fried Rice", 250]]}, {"category": "Chapati & Naan", "items": [["Tandoori Roti", 10], ["Tawa Roti", 12], ["Butter Roti", 13], ["Onion Roti", 15], ["Missi Roti", 20], ["Makki Roti", 25], ["Missi Onion Roti", 30], ["Laccha Parantha", 30], ["Naan Plain", 35], ["Butter Naan", 50], ["Naan Kulcha", 50], ["Aloo Parantha", 50], ["Paneer Parantha", 70], ["Garlic Naan", 70]]}, {"category": "Breakfast", "items": [["Aloo Parantha", 50], ["Piyaz Parantha", 50], ["Mix Parantha", 60], ["Puri Chana", 80], ["Chana Bhatura", 80], ["Bread Butter", 50]]}, {"category": "Snacks & Starters", "items": [["(2 pc) Maggi", 100], ["Veg Maggi", 120], ["Spl. Sandwich Grilled", 140], ["French Fries", 100], ["Veg Manchurian", 160], ["Veg Noodles", 130], ["Burger", 50], ["Noodle Burger", 70], ["Channa Samosa", 60], ["Steam Momos", 80], ["Fried Momos", 100]]}, {"category": "Beverages", "items": [["Tea", 20], ["Milk Tea", 30], ["Hot Coffee", 50], ["Cold Coffee", 100]]}, {"category": "Dahi, Raita & Salad", "items": [["Dahi Plain", 50], ["Raita Boondi", 60], ["Raita Mix", 70], ["Sweet Lassi", 60], ["Salted Lassi", 60], ["Green Salad", 50]]}, {"category": "Mini Meals", "items": [["Rajma Rice", 140], ["Kadi With Rice", 140], ["2 Kulcha + Chana + Raita", 170]]}, {"category": "Thali", "items": [["Sabji, Dal, Salad, 4 Chapati", 120], ["Mutter Paneer, Dal, Salad, 3 Chapati", 160], ["Shahi Paneer, Dal Makhni, Raita, Salad, 4 Chapati", 200], ["Paneer, Dal Makhni, Raita, Salad, Missi Roti + Laccha Parantha", 250], ["Paneer + Dal Makhni + Sabji + Raita + Salad + Papad + 1 Roti + Rice + 1 Laccha Parantha", 350], ["Paneer + Dal Makhni + Mix Veg + Raita + Rice + Papad + Butter Naan + Laccha Parantha + Sweet Dish", 449]]}, {"category": "Shakes", "items": [["Vanilla Shake", 100], ["Strawberry Shake", 100], ["Chocolate Shake", 120], ["Butterscotch Shake", 120]]}];
+let selected="All";
+const allNames=sections.flatMap(s=>s.items);
+const chips=document.getElementById("chips"), menuEl=document.getElementById("menu"), q=document.getElementById("q");
+const categories=["All",...sections.map(s=>s.category)];
+function renderChips(){chips.innerHTML=categories.map(c=>`<button class="chip ${selected===c?"active":""}" data-cat="${c}">${c}</button>`).join("")}
+function render(){
+ const term=q.value.trim().toLowerCase();
+ const filtered=sections.filter(s=>selected==="All"||s.category===selected).map(s=>({...s,items:s.items.filter(i=>i[0].toLowerCase().includes(term))})).filter(s=>s.items.length);
+ const count=filtered.reduce((n,s)=>n+s.items.length,0);
+ document.getElementById("total").textContent=`${count} menu items`;
+ menuEl.innerHTML=count?filtered.map(s=>`<section class="category"><div class="cat-head"><h3>${s.category}</h3><span>${s.items.length} ITEMS</span></div><div class="items">${s.items.map(i=>`<div class="item"><span class="item-name">${i[0]}</span><span class="price">₹${i[1]}</span></div>`).join("")}</div></section>`).join(""):`<div class="empty">No dishes found. Try another search.</div>`;
+}
+chips.addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b)return;selected=b.dataset.cat;renderChips();render()});
+q.addEventListener("input",render);
+renderChips();render();
+</script>
+</body></html>
